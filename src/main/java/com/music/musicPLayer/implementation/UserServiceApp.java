@@ -22,6 +22,7 @@ public class UserServiceApp implements UserService {
         User user = new User();
         user.setPassword(passwordEncoder.encode(request.getPassword()));
         request.setPassword(user.getPassword());
+
         modelMapper.map(request,user);
         userRepository.save(user);
 
