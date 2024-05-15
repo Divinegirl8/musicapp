@@ -1,4 +1,4 @@
-package com.music.musicPLayer.data.dtos.response;
+package com.music.musicPLayer.dtos.response;
 
 import lombok.Getter;
 import lombok.Setter;

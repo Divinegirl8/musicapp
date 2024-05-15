@@ -1,7 +1,7 @@
 package com.music.musicPLayer.implementation;
 
-import com.music.musicPLayer.data.dtos.request.RegistrationRequest;
-import com.music.musicPLayer.data.dtos.response.RegistrationResponse;
+import com.music.musicPLayer.dtos.request.RegistrationRequest;
+import com.music.musicPLayer.dtos.response.RegistrationResponse;
 import com.music.musicPLayer.data.model.User;
 import com.music.musicPLayer.data.repository.UserRepository;
 import com.music.musicPLayer.service.UserService;
@@ -27,7 +27,7 @@ public class UserServiceApp implements UserService {
         userRepository.save(user);
 
         RegistrationResponse response = new RegistrationResponse();
-        response.setId(user.getUserId());
+        response.setId(user.getId());
         return response;
     }
 }
