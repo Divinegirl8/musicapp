@@ -1,13 +1,14 @@
 package com.music.musicPLayer.dtos.request;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Getter
 @Setter
-public class RegistrationRequest {
+@Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class RegisterRequest {
     private String name;
-    private String phoneNumber;
     private String email;
     private String password;
 }

@@ -1,6 +1,7 @@
 package com.music.musicPLayer.service;
 
 import com.music.musicPLayer.dtos.request.RegistrationRequest;
+import com.music.musicPLayer.dtos.response.AuthenticationResponse;
 import com.music.musicPLayer.dtos.response.RegistrationResponse;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ class UserServiceTest {
         request.setPassword("password");
         request.setEmail("email@gmail.com");
         request.setPhoneNumber("090XXX");
-       RegistrationResponse response = userService.register(request);
+        AuthenticationResponse response = userService.register(request);
        assertThat(response).isNotNull();
     }
 
@@ -28,7 +29,7 @@ class UserServiceTest {
         request.setPassword("password");
         request.setEmail("email@gmail.com");
         request.setPhoneNumber("090XXX");
-        RegistrationResponse response = userService.register(request);
+        AuthenticationResponse response = userService.register(request);
         assertThat(response).isNotNull();
     }
 
